@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/gradingBar.js"></script>
+  <link rel="stylesheet" href="css/templatemo_style.css">
+	<style type="text/css"> 
+		#layer {height: auto;width: 1760px;margin-left:35px;}
+		#left {float: left;height: auto;width: 300px;height:auto;margin:20px;}
+		#conter {float: left;height: auto;width: 300px;margin:20px;}
+		#right {float: left;height: auto;width: 300px;margin:20px;}
+
+		fieldset.asterisk {
+			width:100%;
+			height: 100%;
+			border:1px solid #d4d4d4;
+		}
+
+		#ga_range {
+			background-color: #666;
+			width: 75%;
+		}
+
+		.righta{float:left;}
+		.rightb{float:right;margin-right:9px;}
+
+		.grading {
+			font-family: "Arial Black";
+			font-weight: bold;
+			float:right;
+			margin-right:9px;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<header class="site-header container animated fadeInDown">
+		<div class="header-wrapper">
+				<div class="col-md-4">
+					<div class="site-branding">
+						<a href="index.html"><img src = "images/loco.JPG" style="height:110px"></a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<nav id="nav" class="main-navigation hidden-xs hidden-sm">
+						<ul class="main-menu">
+							<li><h6>Build Your Orchestra!&nbsp;&nbsp;&nbsp;&nbsp;</h6></li>
+							<li><a href="index.html">Back</a></li>
+							<li><a class="show-5 contactbutton" href="#">Logout</a></li>
+						</ul>
+					</nav>
+				</div>
+		</div>
+
+		<script type="text/javascript" language="javascript">
+			 var primaryActiveState = "art"; 
+			 var subActiveState = "portfolio"; 
+			 var tittleText = "portfolio"; 
+			 var root = ""; 
+		</script>
+		<script type="text/javascript" language="JavaScript" src="js/niu.js"></script>
+	</header>
+
+<div class="container">
+<form class="list-icons animated fadeInUp" action="/new" method="POST" ng-show="show">
+<div id="layer">
+  <div class="panel-group" id="accordion">
+  <div id="left">
+  <h2>Woodwinds</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">+</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body"> 
+		<!--Flute Class-->
+		&nbsp;&nbsp;Flute:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_fluteclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_fluteclass" class="panel-collapse collapse"><br>
+		<!--Flute 1-->
+			<label for="g_flute1"><b>Flute 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_flute1" class="grading">0</span>
+			<input type="range" name="g_flute1" min="0" max="10" value="0" step="1" onchange="show_g_flute1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapse1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_flute1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_flute1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_flute1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_flute1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_flute1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Flute End-->
+		<br>
+		<!--Flute 2-->
+			<label for="g_flute2"><b>Flute 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseflute2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_flute2" class="grading">0</span>
+			<input type="range" name="g_flute2" min="0" max="10" value="0" step="1" onchange="show_g_flute2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseflute2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_flute2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_flute2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_flute2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_flute2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_flute2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		</div>
+		<!--Flute End-->
+		
+		<hr>
+		<!--Oboe Class-->
+		&nbsp;&nbsp;Oboe:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_oboeclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_oboeclass" class="panel-collapse collapse"><br>
+		<!--Oboe 1-->
+			<label for="g_oboe1"><b>Oboe 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseoboe1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_oboe1" class="grading">0</span>
+			<input type="range" name="g_oboe1" min="0" max="10" value="0" step="1" onchange="show_g_oboe1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseoboe1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_oboe1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_oboe1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_oboe1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_oboe1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_oboe1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Oboe 1 End-->
+		<br>
+		<!--Oboe 2-->
+			<label for="g_oboe2"><b>Oboe 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseoboe2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_oboe2" class="grading">0</span>
+			<input type="range" name="g_oboe2" min="0" max="10" value="0" step="1" onchange="show_g_oboe2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseoboe2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_oboe2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_oboe2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_oboe2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_oboe2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_oboe2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		</div>
+		<!--Oboe End-->
+		<hr>
+		<!--Clarinet Class-->
+		&nbsp;&nbsp;Clarinet:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_clarinetclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_clarinetclass" class="panel-collapse collapse"><br>
+		<!--Clarinet 1-->
+			<label for="g_clarinet1"><b>Clarinet 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseclarinet1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_clarinet1" class="grading">0</span>
+			<input type="range" name="g_clarinet1" min="0" max="10" value="0" step="1" onchange="show_g_clarinet1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseclarinet1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_clarinet1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_clarinet1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_clarinet1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_clarinet1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_clarinet1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Clarinet 1 End-->
+		<br>
+		<!--Clarinet 2-->
+			<label for="g_clarinet2"><b>Clarinet 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseclarinet2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_clarinet2" class="grading">0</span>
+			<input type="range" name="g_clarinet2" min="0" max="10" value="0" step="1" onchange="show_g_clarinet2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseclarinet2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_clarinet2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_clarinet2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_clarinet2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_clarinet2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_clarinet2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		</div>
+		<!--Clarinet End-->
+		<hr>
+		<!--Bassoon Class-->
+		&nbsp;&nbsp;Bassoon:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_bassoonclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_bassoonclass" class="panel-collapse collapse"><br>
+		<!--Bassoon 1-->
+			<label for="g_bassoon1"><b>Bassoon 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsebassoon1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_bassoon1" class="grading">0</span>
+			<input type="range" name="g_bassoon1" min="0" max="10" value="0" step="1" onchange="show_g_bassoon1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsebassoon1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_bassoon1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_bassoon1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_bassoon1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_bassoon1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_bassoon1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Bassoon 1 End-->
+		<br>
+		<!--Bassoon 2-->
+			<label for="g_bassoon2"><b>Bassoon 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsebassoon2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_bassoon2" class="grading">0</span>
+			<input type="range" name="g_bassoon2" min="0" max="10" value="0" step="1" onchange="show_g_bassoon2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsebassoon2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_bassoon2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_bassoon2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_bassoon2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_bassoon2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_bassoon2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		</div>
+		<!--Bassoon End-->
+
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">++</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+
+		<!--Piccolo-->
+			<label for="g_piccolo"><b>Piccolo:&nbsp;&nbsp;</label>
+				<div class = "righta">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse8_asterisk">
+						<img src = "images/asterisk.png">
+					</a> 
+				</div><span id="range_g_piccolo" class="grading">0</span>
+			<input type="range" name="g_piccolo" min="0" max="10" value="0" step="1" onchange="show_g_piccolo(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapse8_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_piccolo" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_piccolo" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_piccolo(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_piccolo_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_piccolo_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Piccolo End-->
+		<hr>
+		<!--English Horn-->
+			<label for="g_englishHorn"><b>English Horn:&nbsp;&nbsp;</label>
+				<div class = "righta">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse9_asterisk">
+						<img src = "images/asterisk.png">
+					</a> 
+				</div><span id="range_g_englishHorn" class="grading">0</span>
+			<input type="range" name="g_englishHorn" min="0" max="10" value="0" step="1" onchange="show_g_englishHorn(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapse9_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_englishHorn" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_englishHorn" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_englishHorn(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_eh_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_eh_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--English Horn End-->
+		<hr>
+		<!--Bass Clarinet-->
+			<label for="g_bassclarinet"><b>Bass Clarinet:&nbsp;&nbsp;</label>
+				<div class = "righta">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse10_asterisk">
+						<img src = "images/asterisk.png">
+					</a> 
+				</div><span id="range_g_bassclarinet" class="grading">0</span>
+			<input type="range" name="g_bassclarinet" min="0" max="10" value="0" step="1" onchange="show_g_bassclarinet(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapse10_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_bassclarinet" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_bassclarinet" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_bassclarinet(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_basscla_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_basscla_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Bass Clarinet End-->
+		<hr>
+		<!--Contrabassoon-->
+			<label for="g_contrabassoon"><b>Contrabassoon:&nbsp;&nbsp;</label>
+				<div class = "righta">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse11_asterisk">
+						<img src = "images/asterisk.png">
+					</a> 
+				</div><span id="range_g_contrabassoon" class="grading">0</span>
+			<input type="range" name="g_contrabassoon" min="0" max="10" value="0" step="1" onchange="show_g_contrabassoon(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapse11_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_contrabassoon" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_contrabassoon" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_contrabassoon(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_ctrbas_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_ctrbas_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Contrabassoon End-->
+
+		</div>
+      </div>
+    </div>
+
+	<br>
+	<h2>Other</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">+</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+		<!--Harp-->
+			<label for="g_harp"><b>Harp: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseharp_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_harp" class="grading">0</span>
+			<input type="range" name="g_harp" min="0" max="10" value="0" step="1" onchange="show_g_harp(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseharp_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_harp" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_harp" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_harp(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_harp_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_harp_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Harp End-->
+		<hr>
+		<!--Piano-->
+			<label for="g_piano"><b>Piano: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsepiano_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_piano" class="grading">0</span>
+			<input type="range" name="g_piano" min="0" max="10" value="0" step="1" onchange="show_g_piano(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsepiano_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_piano" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_piano" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_piano(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_piano_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_piano_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Piano End-->
+		<hr>
+		<!--Organ-->
+			<label for="g_organ"><b>Organ: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseorgan_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_organ" class="grading">0</span>
+			<input type="range" name="g_organ" min="0" max="10" value="0" step="1" onchange="show_g_organ(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseorgan_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_organ" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_organ" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_organ(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_organ_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_organ_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Organ End-->
+
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">++</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+		<!--Celesta-->
+			<label for="g_celesta"><b>Celesta: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsecelesta_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_celesta" class="grading">0</span>
+			<input type="range" name="g_celesta" min="0" max="10" value="0" step="1" onchange="show_g_celesta(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsecelesta_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_celesta" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_celesta" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_celesta(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_celesta_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_celesta_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Celesta End-->
+
+		</div>
+      </div>
+    </div>
+
+	</div>
+
+	<div id="conter">
+	<h2>Brass</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">+</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">
+
+		<!--French Horn Class-->
+		&nbsp;&nbsp;French Horn:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_fhclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_fhclass" class="panel-collapse collapse"><br>
+		<!--French Horn 1-->
+			<label for="g_fh1"><b>French Horn 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsefh1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_fh1" class="grading">0</span>
+			<input type="range" name="g_fh1" min="0" max="10" value="0" step="1" onchange="show_g_fh1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsefh1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_fh1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_fh1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_fh1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_fh1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_fh1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--French Horn 1 End-->
+		<br>
+		<!--French Horn 2-->
+			<label for="g_fh2"><b>French Horn 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsefh2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_fh2" class="grading">0</span>
+			<input type="range" name="g_fh2" min="0" max="10" value="0" step="1" onchange="show_g_fh2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsefh2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_fh2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_fh2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_fh2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_fh2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_fh2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--French Horn 2 End-->
+		<br>
+		<!--French Horn 3-->
+			<label for="g_fh3"><b>French Horn 3: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsefh3_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_fh3" class="grading">0</span>
+			<input type="range" name="g_fh3" min="0" max="10" value="0" step="1" onchange="show_g_fh3(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsefh3_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_fh3" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_fh3" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_fh3(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_fh3_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_fh3_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--French Horn 3 End-->
+		<br>
+		<!--French Horn 4-->
+			<label for="g_fh4"><b>French Horn 4: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsefh4_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_fh4" class="grading">0</span>
+			<input type="range" name="g_fh4" min="0" max="10" value="0" step="1" onchange="show_g_fh4(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsefh4_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_fh4" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_fh4" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_fh4(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_fh4_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_fh4_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--French Horn 4 End-->
+		</div>
+		<!--French Horn Class End-->
+		<hr>
+		<!--Trumpet Class-->
+		&nbsp;&nbsp;Trumpet:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_tpclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_tpclass" class="panel-collapse collapse"><br>
+		<!--Trumpet 1-->
+			<label for="g_trumpet1"><b>Trumpet 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetrumpet_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_trumpet1" class="grading">0</span>
+			<input type="range" name="g_trumpet1" min="0" max="10" value="0" step="1" onchange="show_g_trumpet1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetrumpet_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_trumpet1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_trumpet1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_trumpet1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_trumpet1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_trumpet1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Trumpet 1 End-->
+		<br>
+		<!--Trumpet 2-->
+			<label for="g_trumpet2"><b>Trumpet 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetrumpet2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_trumpet2" class="grading">0</span>
+			<input type="range" name="g_trumpet2" min="0" max="10" value="0" step="1" onchange="show_g_trumpet2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetrumpet2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_trumpet2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_trumpet2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_trumpet2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_trumpet2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_trumpet2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		</div>
+		<!--Trumpet End-->
+		<hr>
+		<!--Trombone Class-->
+		&nbsp;&nbsp;Trombone:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_tbclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_tbclass" class="panel-collapse collapse"><br>
+		<!--Trombone 1-->
+			<label for="g_trombone1"><b>Trombone 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetrombone_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_trombone1" class="grading">0</span>
+			<input type="range" name="g_trombone1" min="0" max="10" value="0" step="1" onchange="show_g_trombone1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetrombone_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_trombone1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_trombone1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_trombone1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_trombone1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_trombone1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Trombone 1 End-->
+		<br>
+		<!--Trombone 2-->
+			<label for="g_trombone2"><b>Trombone 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetrombone2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_trombone2" class="grading">0</span>
+			<input type="range" name="g_trombone2" min="0" max="10" value="0" step="1" onchange="show_g_trombone2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetrombone2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_trombone2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_trombone2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_trombone2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_trombone2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_trombone2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		</div>
+		<!--Trombone End-->
+		<hr>
+		<!--Bass Trombone-->
+			<label for="g_btrombone"><b>Bass Trombone: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsebtrombone_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_btrombone" class="grading">0</span>
+			<input type="range" name="g_btrombone" min="0" max="10" value="0" step="1" onchange="show_g_btrombone(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsebtrombone_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_btrombone" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_btrombone" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_btrombone(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_btrombone_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_btrombone_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Bass Trombone End-->
+		<hr>
+		<!--Tuba-->
+			<label for="g_tuba"><b>Tuba: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetuba_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_tuba" class="grading">0</span>
+			<input type="range" name="g_tuba" min="0" max="10" value="0" step="1" onchange="show_g_tuba(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetuba_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_tuba" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_tuba" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_tuba(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_tuba_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_tuba_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Tuba End-->
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">++</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+		<!--Viola D'amore-->
+			<label for="g_vda"><b>Viola D'amore: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsevda_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_vda" class="grading">0</span>
+			<input type="range" name="g_vda" min="0" max="10" value="0" step="1" onchange="show_g_vda(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsevda_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_vda" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_vda" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_vda(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_vda_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_vda_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Viola D'amore End-->
+		</div>
+      </div>
+    </div>
+
+	<br>
+	<h2>String</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">+</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">
+		<!--Violin 1-->
+			<label for="g_violin1"><b>Violin 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsevio1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_violin1" class="grading">0</span>
+			<input type="range" name="g_violin1" min="0" max="10" value="0" step="1" onchange="show_g_violin1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsevio1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_violin1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_violin1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_violin1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_violin1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_violin1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Violin 1 End-->
+		<hr>
+		<!--Violin 2-->
+			<label for="g_violin2"><b>Violin 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseviolin2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_violin2" class="grading">0</span>
+			<input type="range" name="g_violin2" min="0" max="10" value="0" step="1" onchange="show_g_violin2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseviolin2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_violin2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_violin2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_violin2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_violin2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_violin2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Violin 2 End-->
+		<hr>
+		<!--Cellos-->
+			<label for="g_cellos"><b>Cellos: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsecellos_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_cellos" class="grading">0</span>
+			<input type="range" name="g_cellos" min="0" max="10" value="0" step="1" onchange="show_g_cellos(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsecellos_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_cellos" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_cellos" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_cellos(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_cellos_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_cellos_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Cellos End-->
+		<hr>
+		<!--Viola-->
+			<label for="g_viola"><b>Viola: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseviola_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_viola" class="grading">0</span>
+			<input type="range" name="g_viola" min="0" max="10" value="0" step="1" onchange="show_g_viola(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapseviola_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_viola" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_viola" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_viola(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_viola_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb"  name="ga_viola_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Viola End-->
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">++</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">
+
+		</div>
+      </div>
+    </div>
+
+	</div>
+
+	<div id="right">
+	<h2>Percussion</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">+</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">
+		<!--Timpani-->
+			<label for="g_timpani"><b>Timpani: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetimpani_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_timpani" class="grading">0</span>
+			<input type="range" name="g_timpani" min="0" max="10" value="0" step="1" onchange="show_g_timpani(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetimpani_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_timpani" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_timpani" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_timpani(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_timpani_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_timpani_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Timpani End-->
+		<hr>
+		<!--Percussion Class-->
+		&nbsp;&nbsp;Percussion:
+			<div class = "rightb">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse_percussionclass"><img src = "images/arrow.png" width = 85% height = 85%></a>
+			</div>
+		<div id="collapse_percussionclass" class="panel-collapse collapse"><br>
+		<!--Percussion 1-->
+			<label for="g_percussion1"><b>Percussion 1: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsepercussion1_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_percussion1" class="grading">0</span>
+			<input type="range" name="g_percussion1" min="0" max="10" value="0" step="1" onchange="show_g_percussion1(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsepercussion1_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_percussion1" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_percussion1" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_percussion1(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_percussion1_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_percussion1_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Percussion 1 End-->
+		<br>
+		<!--Percussion 2-->
+			<label for="g_percussion2"><b>Percussion 2: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsepercussion2_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_percussion2" class="grading">0</span>
+			<input type="range" name="g_percussion2" min="0" max="10" value="0" step="1" onchange="show_g_percussion2(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsepercussion2_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_percussion2" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_percussion2" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_percussion2(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_percussion2_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_percussion2_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Percussion 2 End-->
+		<br>
+		<!--Percussion 3-->
+			<label for="g_percussion3"><b>Percussion 3: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsepercussion3_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_percussion3" class="grading">0</span>
+			<input type="range" name="g_percussion3" min="0" max="10" value="0" step="1" onchange="show_g_percussion3(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsepercussion3_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_percussion3" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_percussion3" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_percussion3(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_percussion3_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_percussion3_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Percussion 3 End-->
+		</div>
+		<!--Percussion Class End-->
+
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">++</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">
+		<!--Drum-->
+			<label for="g_drum"><b>Drum: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsedrum_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_drum" class="grading">0</span>
+			<input type="range" name="g_drum" min="0" max="10" value="0" step="1" onchange="show_g_drum(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsedrum_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_drum" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_drum" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_drum(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_drum_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_drum_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Drum End-->
+		<hr>
+		<!--Cymbals-->
+			<label for="g_cymbals"><b>Cymbals: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsecymbals_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_cymbals" class="grading">0</span>
+			<input type="range" name="g_cymbals" min="0" max="10" value="0" step="1" onchange="show_g_cymbals(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsecymbals_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_cymbals" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_cymbals" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_cymbals(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_cymbals_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_cymbals_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Cymbals End-->
+		<hr>
+		<!--Tim-tam-->
+			<label for="g_tt"><b>Tim-tam: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsett_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_tt" class="grading">0</span>
+			<input type="range" name="g_tt" min="0" max="10" value="0" step="1" onchange="show_g_tt(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsett_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_tt" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_tt" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_tt(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_tt_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_tt_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Tim-tam End-->
+		<hr>
+		<!--Triangle-->
+			<label for="g_triangle"><b>Triangle: &nbsp;&nbsp;</label>
+			<div class = "righta">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsetriangle_asterisk">
+					<img src = "images/asterisk.png">
+				</a> 
+			</div><span id="range_g_triangle" class="grading">0</span>
+			<input type="range" name="g_triangle" min="0" max="10" value="0" step="1" onchange="show_g_triangle(this.value)"/>
+
+			<!--asterisk-->
+			<div id="collapsetriangle_asterisk" class="panel-collapse collapse"><br>
+				<fieldset class="asterisk">
+				<br>&nbsp;&nbsp;Grade: 
+					<span id="range_ga_triangle" class="grading" style="margin-left: 27px;">0</span><br>
+					<input type="range" name="ga_triangle" class="rightb" min="0" max="10" value="0" step="1" size="1" style="width: 66%;" onchange="show_ga_triangle(this.value)"/>
+				<br><br>
+				&nbsp;&nbsp;Where:
+					<input type="text" class="rightb" name="ga_triangle_where">&nbsp;
+				<br><br>
+				&nbsp;&nbsp;Why:
+					<textarea rows="3" cols="22" class="rightb" name="ga_triangle_why"></textarea>
+					<br><br><br><br>
+				</fieldset>
+				<br>
+			</div>
+		<!--Triangle End-->
+		</div>
+      </div>
+    </div>
+
+	<br>
+	<h2>Submission</h2>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">+</a>
+			</h4>
+		  </div>
+		  <div id="collapse11" class="panel-collapse collapse">
+			<div class="panel-body">					
+				<label for="composer">Composer:  </label>
+				<input type="text" class="rightb" name="composer" size="15"/><br/><br/>
+				<label for="composition">Composition: </label>
+				<input type="text" class="rightb" name="composition" size="15"/></div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">++</a>
+			</h4>
+		  </div>
+		  <div id="collapse12" class="panel-collapse collapse">
+			<div class="panel-body">
+				<center><input type="submit"/></center>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+  </div> 
+</div>
+
+</form>
+</div>
+</body>
+</html>

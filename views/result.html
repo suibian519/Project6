@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Loco Matching Result</title>
+
+	<style>
+		.chart div {
+		  font: 10px sans-serif;
+		  background-color: steelblue;
+		  text-align: right;
+		  padding: 3px;
+		  margin: 1px;
+		  color: white;
+		}
+	</style>
+
+ </head>
+ <body>
+
+
+	<% for(var i=0; i < musics.length; i++) {%>
+		<li>Composer : <%= musics[i].Composer %></li>
+		<li>Composition: <%= musics[i].Composition %></li><br>
+	<% } %>
+	</ul>
+ </body>
+</html>

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<title>LOCO</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/templatemo_style.css">
+	<link rel="stylesheet" href="css/rating.css">
+	<style type="text/css"> #layer {height: auto;width: 1760px;height:800px;margin-left:90px}
+		#left {float: left;height: auto;width: 230px;height:800px;background-color:#DAF4FE;}
+		#conter {float: left;height: 800px;width: 230px;background-color:#FDF1C1;}
+		#right {float: left;height: 800px;width: 230px;background-color:#DAF4FE;}
+		#fin {float: left;height: 800px;width: 230px;background-color:#FDF1C1;}
+	</style>
+</head>
+<body>
+	
+
+	<header class="site-header container animated fadeInDown">
+		<div class="header-wrapper">
+				<div class="col-md-4">
+					<div class="site-branding">
+						<a href="index.html"><img src = "images/loco.JPG" style="height:110px"></a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<nav id="nav" class="main-navigation hidden-xs hidden-sm">
+						<ul class="main-menu">
+							<li><a class="show-1 active homebutton" href="#">Home</a></li>
+							<li><a class="show-2 aboutbutton" href="#">About</a></li>
+							<li><a href="grading.html">Grade A Piece</a></li>
+							<li><a href="searching.html">Search Music</a></li>
+							<!--<li><a class="show-4 blogbutton" href="#">Search Music</a></li>-->
+							<li><a class="show-5 contactbutton" href="#">Login/Register</a></li>
+						</ul>
+					</nav>
+				</div>
+		</div>
+		<br>
+		<script type="text/javascript" language="javascript">
+			 var primaryActiveState = "art"; 
+			 var subActiveState = "portfolio"; 
+			 var tittleText = "portfolio"; 
+			 var root = ""; 
+		</script>
+		<script type="text/javascript" language="JavaScript" src="js/niu.js"></script>
+	</header>
+	
+	<div id="menu-container">
+		<div id="menu-1" class="homepage home-section container">
+			<div class="home-intro animated fadeInUp text-center">
+			<p class="list-icons animated fadeInUp">
+				<script type="text/javascript" language="javascript">portfolioFlowList(5)</script>
+			</p>
+			</div>
+		</div>
+
+		<div id="menu-2" class="content about-section container">
+						<div class="inner-story animated fadeInRight text-center">
+							<h2>Mission</h2>
+							<p>The mission of this site is to provide user with a viable means for expanding their musical repertoire. The site supplies orchestras with various tools for grading and searching for pieces of music. The site will strive to connect orchestra conductors and players with pieces of music that suit their skill level and interest.</p>
+						</div>
+						<div class="inner-story animated fadeInLeft text-center">
+							<h2>By Signing Up You Can:</h2>
+								<ul>
+									<li> Contribute to the archive of previously graded pieces. </li>
+									<li> Customize your personal preferences to include instruments you are familiar with. </li>
+									<li> Create your own orchestra. </li>
+									<li> Grade your musicians. </li>
+									<li> Receive pieces tailored to the skill level of your players. </li>
+								</ul>
+						</div>
+
+<div class="inner-story animated fadeInRight text-center">
+		<h3>Grading Explained</h3>
+			<p>The grading scheme allows for grades ranging from 1 to 10.  A grade 1 corresponds to a low difficulty part, whereas a 10 corresponds to a very difficult part.
+			</p>
+			<p>Example Cello Grading:</p>
+			<ul>
+				<li><span style="color: rgb(10,235,0);">Grade 1:</span> Benjamin Britten ripieno for St Nicholas</li>
+				<li><span style="color: rgb(28,227,0);">Grade 2:</span> Bizet Farandole from L'Arlesienne Suite</li>
+				<li><span style="color: rgb(57,198,0);">Grade 3:</span> Corelli ripieno for any of the concerti grossi</li>
+				<li><span style="color: rgb(85,170,0);">Grade 4:</span> Schubert 1st movement of the Unfinished Symphony</li>
+				<li><span style="color: rgb(113,142,0);">Grade 5:</span> Beethoven 1st movement from 1st Symphony</li>
+				<li><span style="color: rgb(142,113,0);">Grade 6:</span> Beethoven 2nd and 3rd movements from 5th Symphony</li>
+				<li><span style="color: rgb(170,85,0);">Grade 7:</span> Shostakovitch Festival Overture</li>
+				<li><span style="color: rgb(198,57,0);">Grade 8:</span> Mozart Magic Flute Overture</li>
+				<li><span style="color: rgb(227,28,0);">Grade 9:</span> Richard Strauss solo part for Don Quixote</li>
+				<li><span style="color: rgb(255,0,0);">Grade 10:</span> Haydn solo part from the Symphonia Concertante</li>
+			</ul>
+				<span>Note:</span> <p class="note_text">Grades 1-8 are similar to the grades for the ABRSM exams, grade 9 is at the level of a teaching diploma, and grade 10 a performance diploma. (ABRSM is the exam board of the Royal Schools of Music).</p>
+		</div>
+</div>
+
+		<div id="menu-3" class="content project-section container text-center">
+			<!--div class="projects-header"-->
+
+				 <form class="list-icons animated fadeInUp" action="/new" method="POST" ng-show="show">
+				 <div id="layer">
+				    <div id="left">
+					<label for="composer">Composer:  </label><br/>
+					<input type="text" name="composer" /><br/>
+						<label for="composition">Composition: </label><br/>
+						<input type="text" name="composition" /><br/>
+						<br/>Woodwinds<br/>
+						<div id="demo">
+						<label for="g_piccolo"><b>Piccolo:</label><br/>
+						<input type="number" name="g_piccolo" /><br />
+						<label for="g_flute"><b>Flute:</label><br/>
+						<input type="number" name="g_flute" /><br />
+						<label for="g_oboe"><b>Oboe:</label><br/>
+						<input type="number" name="g_oboe" /><br />
+						<label for="g_e_h"><b>English Horn:</label><br/>
+						<input type="number" name="g_e_h" /><br />
+						</div>
+						<label for="g_b_larinet"><b>B Clarinet:</label><br/>
+						<input type="number" name="g_b_larinet" /><br />
+						<label for="g_a_larinet"><b>A Clarinet:</label><br/>
+						<input type="number" name="g_a_larinet" /><br />
+						<label for="g_d_larinet"><b>D Clarinet:</label><br/>
+						<input type="number" name="g_d_larinet" /><br />
+						<label for="g_e_larinet"><b>E Clarinet:</label><br/>
+						<input type="number" name="g_e_larinet" /><br />
+						<label for="g_bass_larinet"><b>Bass Clarinet:</label><br/>
+						<input type="number" name="g_bass_larinet" /><br />
+						<label for="g_bassoon"><b>Bassoon:</label><br/>
+						<input type="number" name="g_bassoon" /><br />
+						<label for="g_contrabassoon"><b>Contrabassoon:</label><br/>
+						<input type="number" name="g_contrabassoon" /><br />
+						</div>
+
+						<div id="conter">
+						Brass<br/>
+						<label for="g_fhf"><b>French Horn F:</label><br/>
+						<input type="number" name="g_fhf" /><br />
+						<label for="g_b_trumpet"><b>B Trumpet:</label><br/>
+						<input type="number" name="g_b_trumpet" /><br />
+						<label for="g_f_trumpet"><b>F Trumpet:</label><br/>
+						<input type="number" name="g_f_trumpet" /><br />
+						<label for="g_c_trumpet"><b>C Trumpet:</label><br/>
+						<input type="number" name="g_c_trumpet" /><br />
+						<label for="g_tenor_trombone"><b>Tenor Trombone:</label><br/>
+						<input type="number" name="g_tenor_trombone" /><br />
+						<label for="g_bass_trombone"><b>Bass Trombone:</label><br/>
+						<input type="number" name="g_bass_trombone" /><br />
+						<label for="g_tuba"><b>Tuba:</label><br/>
+						<input type="number" name="g_tuba" /><br />
+						<label for="g_baritone_horn"><b>Baritone Horn:</label><br/>
+						<input type="number" name="g_baritone_horn" /><br />
+						<label for="g_euphonium"><b>Euphonium:</label><br/>
+						<input type="number" name="g_euphonium" /><br />
+						</div>
+
+						<div id="right">
+						Percussion<br/>
+						<label for="g_timpani"><b>Timpani:</label><br/>
+						<input type="number" name="g_timpani" /><br />
+						<label for="g_snare_drum"><b>Snare Drum:</label><br/>
+						<input type="number" name="g_snare_drum" /><br />
+						<label for="g_tenor_drum"><b>Tenor Drum:</label><br/>
+						<input type="number" name="g_tenor_drum" /><br />
+						<label for="g_bass_drum"><b>Bass Drum:</label><br/>
+						<input type="number" name="g_bass_drum" /><br />
+						<label for="g_cymbals"><b>Cymbals:</label><br/>
+						<input type="number" name="g_cymbals" /><br />
+						<label for="g_timtam"><b>Tim-tam:</label><br/>
+						<input type="number" name="g_timtam" /><br />
+						<label for="g_triangle"><b>Triangle:</label><br/>
+						<input type="number" name="g_triangle" /><br />
+						<label for="g_wood_block"><b>Wood Block:</label><br/>
+						<input type="number" name="g_wood_block" /><br />
+						<label for="g_tambourine"><b>Tambourine:</label><br/>
+						<input type="number" name="g_tambourine" /><br />
+						<label for="g_glockenspiel"><b>Glockenspiel:</label><br/>
+						<input type="number" name="g_glockenspiel" /><br />
+						<label for="g_xylophone"><b>Xylophone:</label><br/>
+						<input type="number" name="g_xylophone" /><br />
+						<label for="g_vibraphone"><b>Vibraphone:</label><br/>
+						<input type="number" name="g_vibraphone" /><br />
+						<label for="g_tubular_bells"><b>Tubular Bells:</label><br/>
+						<input type="number" name="g_tubular_bells" /><br />
+						<label for="g_marimba"><b>Marimba:</label><br/>
+						<input type="number" name="g_marimba" /><br />
+						</div>
+
+						<div id="fin">
+						String<br/>
+						<label for="g_harps"><b>Harps:</label><br/>
+						<input type="number" name="g_harps" /><br />
+						<label for="g_violins"><b>Violins:</label><br/>
+						<input type="number" name="g_violins" /><br />
+						<label for="g_violas"><b>Violas:</label><br/>
+						<input type="number" name="g_violas" /><br />
+						<label for="g_cellos"><b>Cellos:</label><br/>
+						<input type="number" name="g_cellos" /><br />
+						<label for="g_double_basses"><b>Double Basses:</label><br/>
+						<input type="number" name="g_double_basses" /><br />
+
+						<br/>Keyboards<br/>
+						<label for="g_piano"><b>Piano:</label><br/>
+						<input type="number" name="g_piano" /><br />
+						<label for="g_celesta"><b>Celesta:</label><br/>
+						<input type="number" name="g_celesta" /><br />
+						<label for="g_pipe_organ"><b>Pipe Organ:</label><br/>
+						<input type="number" name="g_pipe_organ" /><br />
+
+						<br/><input type="submit"/>
+						</div>
+				</form>
+				</div>
+		</div>
+
+		<div id="menu-4" class="content blog-section container text-center">
+			<form class="list-icons animated fadeInUp" action="/search" method="POST">
+				 <div id="layer">
+				    <div id="left">
+						Woodwinds<br/>
+						<label for="s_piccolo"><b>Piccolo:</label><br/>
+						<input type="number" name="s_piccolo" /><br />
+						<label for="s_flute"><b>Flute:</label><br/>
+						<input type="number" name="s_flute" /><br />
+						<label for="s_oboe"><b>Oboe:</label><br/>
+						<input type="number" name="s_oboe" /><br />
+						<label for="s_e_h"><b>English Horn:</label><br/>
+						<input type="number" name="s_e_h" /><br />
+						<label for="s_b_larinet"><b>B Clarinet:</label><br/>
+						<input type="number" name="s_b_larinet" /><br />
+						<label for="s_a_larinet"><b>A Clarinet:</label><br/>
+						<input type="number" name="s_a_larinet" /><br />
+						<label for="s_d_larinet"><b>D Clarinet:</label><br/>
+						<input type="number" name="s_d_larinet" /><br />
+						<label for="s_e_larinet"><b>E Clarinet:</label><br/>
+						<input type="number" name="s_e_larinet" /><br />
+						<label for="s_bass_larinet"><b>Bass Clarinet:</label><br/>
+						<input type="number" name="s_bass_larinet" /><br />
+						<label for="s_bassoon"><b>Bassoon:</label><br/>
+						<input type="number" name="s_bassoon" /><br />
+						<label for="s_contrabassoon"><b>Contrabassoon:</label><br/>
+						<input type="number" name="s_contrabassoon" /><br />
+						</div>
+
+						<div id="conter">
+						Brass<br/>
+						<label for="s_fhf"><b>French Horn F:</label><br/>
+						<input type="number" name="s_fhf" /><br />
+						<label for="s_b_trumpet"><b>B Trumpet:</label><br/>
+						<input type="number" name="s_b_trumpet" /><br />
+						<label for="s_f_trumpet"><b>F Trumpet:</label><br/>
+						<input type="number" name="s_f_trumpet" /><br />
+						<label for="s_c_trumpet"><b>C Trumpet:</label><br/>
+						<input type="number" name="s_c_trumpet" /><br />
+						<label for="s_tenor_trombone"><b>Tenor Trombone:</label><br/>
+						<input type="number" name="s_tenor_trombone" /><br />
+						<label for="s_bass_trombone"><b>Bass Trombone:</label><br/>
+						<input type="number" name="s_bass_trombone" /><br />
+						<label for="s_tuba"><b>Tuba:</label><br/>
+						<input type="number" name="s_tuba" /><br />
+						<label for="s_baritone_horn"><b>Baritone Horn:</label><br/>
+						<input type="number" name="s_baritone_horn" /><br />
+						<label for="s_euphonium"><b>Euphonium:</label><br/>
+						<input type="number" name="s_euphonium" /><br />
+						</div>
+
+						<div id="right">
+						Percussion<br/>
+						<label for="s_timpani"><b>Timpani:</label><br/>
+						<input type="number" name="s_timpani" /><br />
+						<label for="s_snare_drum"><b>Snare Drum:</label><br/>
+						<input type="number" name="s_snare_drum" /><br />
+						<label for="s_tenor_drum"><b>Tenor Drum:</label><br/>
+						<input type="number" name="s_tenor_drum" /><br />
+						<label for="s_bass_drum"><b>Bass Drum:</label><br/>
+						<input type="number" name="s_bass_drum" /><br />
+						<label for="s_cymbals"><b>Cymbals:</label><br/>
+						<input type="number" name="s_cymbals" /><br />
+						<label for="s_timtam"><b>Tim-tam:</label><br/>
+						<input type="number" name="s_timtam" /><br />
+						<label for="s_triangle"><b>Triangle:</label><br/>
+						<input type="number" name="s_triangle" /><br />
+						<label for="s_wood_block"><b>Wood Block:</label><br/>
+						<input type="number" name="s_wood_block" /><br />
+						<label for="s_tambourine"><b>Tambourine:</label><br/>
+						<input type="number" name="s_tambourine" /><br />
+						<label for="s_glockenspiel"><b>Glockenspiel:</label><br/>
+						<input type="number" name="s_glockenspiel" /><br />
+						<label for="s_xylophone"><b>Xylophone:</label><br/>
+						<input type="number" name="s_xylophone" /><br />
+						<label for="s_vibraphone"><b>Vibraphone:</label><br/>
+						<input type="number" name="s_vibraphone" /><br />
+						<label for="s_tubular_bells"><b>Tubular Bells:</label><br/>
+						<input type="number" name="s_tubular_bells" /><br />
+						<label for="s_marimba"><b>Marimba:</label><br/>
+						<input type="number" name="s_marimba" /><br />
+						</div>
+
+						<div id="fin">
+						String<br/>
+						<label for="s_harps"><b>Harps:</label><br/>
+						<input type="number" name="s_harps" /><br />
+						<label for="s_violins"><b>Violins:</label><br/>
+						<input type="number" name="s_violins" /><br />
+						<label for="s_violas"><b>Violas:</label><br/>
+						<input type="number" name="s_violas" /><br />
+						<label for="s_cellos"><b>Cellos:</label><br/>
+						<input type="number" name="s_cellos" /><br />
+						<label for="s_double_basses"><b>Double Basses:</label><br/>
+						<input type="number" name="s_double_basses" /><br />
+
+						<br/>Keyboards<br/>
+						<label for="s_piano"><b>Piano:</label><br/>
+						<input type="number" name="s_piano" /><br />
+						<label for="s_celesta"><b>Celesta:</label><br/>
+						<input type="number" name="scelesta" /><br />
+						<label for="s_pipe_organ"><b>Pipe Organ:</label><br/>
+						<input type="number" name="s_pipe_organ" /><br />
+
+						<br/><input type="submit" value="Search"/>
+						</div>
+			</form>
+		</div>
+
+		<div id="menu-5" class="content contact-section container">
+
+
+		</div>
+	</div>
+
+
+	<!-- templatemo 421 raleway 
+	<span class="border-top"></span>
+	<span class="border-left"></span>
+	<span class="border-right"></span>
+	<span class="border-bottom"></span>
+	<span class="shape-1"></span>
+	<span class="shape-2"></span>-->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/templatemo_custom.js"></script>
+
+</body>
+</html>

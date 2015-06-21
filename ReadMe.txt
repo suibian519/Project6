@@ -1,11 +1,11 @@
 Main:
-©À©¤©¤©¤bin			// A bin folder
-©À©¤©¤©¤models		// Contains Mongoose data schema
-©À©¤©¤©¤node_modules	// Npm package manager installs node.js modules(such as express, mongoose) here
-©À©¤©¤©¤public		// A folder contains front end webpages
-©À©¤©¤©¤routes		// Node routes folder, not in use currently
-©À©¤©¤©¤views		// Result output folder. Can do data visualization task here in the future
-©¦
-©À©¤©¤©¤main.js		// Main app js file
-©¸©¤©¤©¤package.json	// Contains important info about the current modules version. 
+â”œâ”€â”€â”€bin			// A bin folder
+â”œâ”€â”€â”€models		// Contains Mongoose data schema
+â”œâ”€â”€â”€node_modules	// Npm package manager installs node.js modules(such as express, mongoose) here
+â”œâ”€â”€â”€public		// A folder contains front end webpages
+â”œâ”€â”€â”€routes		// Node routes folder, not in use currently
+â”œâ”€â”€â”€views		// Result output folder. Can do data visualization task here in the future
+â”‚
+â”œâ”€â”€â”€main.js		// Main app js file
+â””â”€â”€â”€package.json	// Contains important info about the current modules version. 
 			// Use npm to install/update modules according to this file.
